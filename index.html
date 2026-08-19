@@ -5,9 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dillo Dev</title>
+    <title>dillo Dev</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Prism.js -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css"
+    >
 </head>
 
 <body>
@@ -29,45 +35,45 @@
 
     <main>
 
-        <!-- Hero -->
+        <!-- =========================
+             HERO
+        ========================== -->
 
         <section class="hero">
 
-            <div class="hero-content">
+            <div class="hero-text">
 
-                <div class="hero-text">
+                <h2>Hey, I'm Dillo.</h2>
 
-                    <h2>Hey, I'm Dillo.</h2>
+                <p>
+                    I'm a Roblox developer with over 2 years of experience
+                    building games and systems. I mainly focus on scripting,
+                    but I also enjoy UI, GFX, modelling, and experimenting
+                    with new technology.
+                </p>
 
-                    <p>
-                        I'm a Roblox developer with over 2 years of experience
-                        building games and systems. I mainly focus on scripting,
-                        but I also enjoy UI, GFX, modelling, and experimenting
-                        with new technology.
-                    </p>
+                <a class="hero-link" href="projects.html">
+                    View my projects →
+                </a>
 
-                    <a class="hero-link" href="projects.html">
-                        View my projects →
-                    </a>
-
-                </div>
+            </div>
 
 
-                <div class="hero-image">
+            <div class="hero-image">
 
-                    <img
-                        src="Assets/scripting-image.png"
-                        alt="Scripting"
-                    >
-
-                </div>
+                <img
+                    src="Assets/scripting-image.png"
+                    alt="Scripting"
+                >
 
             </div>
 
         </section>
 
 
-        <!-- Skills -->
+        <!-- =========================
+             SKILLS
+        ========================== -->
 
         <section class="skills">
 
@@ -127,7 +133,56 @@
         </section>
 
 
-        <!-- Current -->
+        <!-- =========================
+             SCRIPT SHOWCASE
+        ========================== -->
+
+        <section class="code-section">
+
+            <h2>Code Showcase</h2>
+
+            <p class="code-description">
+                Here's a small example of some Luau code I've written.
+            </p>
+
+
+            <div class="code-showcase">
+
+                <div class="code-header">
+
+                    <span>ProgressionService.luau</span>
+
+                    <span class="code-language">Luau</span>
+
+                </div>
+
+
+                <pre><code class="language-lua">local ProgressionService = {}
+
+function ProgressionService:Give(player, amount)
+
+    local exp = player:GetAttribute("EXP") or 0
+
+    player:SetAttribute("EXP", exp + amount)
+
+end
+
+function ProgressionService:Get(player)
+
+    return player:GetAttribute("EXP") or 0
+
+end
+
+return ProgressionService</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CURRENT
+        ========================== -->
 
         <section class="current">
 
@@ -142,6 +197,13 @@
         </section>
 
     </main>
+
+
+    <!-- Prism.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-lua.min.js"></script>
 
 </body>
 
