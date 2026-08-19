@@ -30,7 +30,9 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    padding: 20px 60px;
+    height: 73px;
+
+    padding: 0 60px;
 
     border-bottom: 1px solid #292929;
 
@@ -84,7 +86,7 @@ main {
 
     margin: 0 auto;
 
-    padding: 90px 30px;
+    padding: 0 30px;
 }
 
 h2 {
@@ -104,7 +106,12 @@ h3 {
 ========================= */
 
 .hero {
-    margin-bottom: 100px;
+    min-height: calc(100vh - 73px);
+
+    margin-bottom: 0;
+
+    display: flex;
+    align-items: center;
 }
 
 .hero-content {
@@ -112,7 +119,9 @@ h3 {
 
     align-items: center;
 
-    min-height: 400px;
+    width: 100%;
+
+    min-height: 600px;
 }
 
 .hero-text {
@@ -124,7 +133,9 @@ h3 {
 .hero-text h2 {
     margin-bottom: 20px;
 
-    font-size: 52px;
+    font-size: 60px;
+
+    line-height: 1.1;
 }
 
 .hero-text p {
@@ -133,6 +144,7 @@ h3 {
     color: #999999;
 
     font-size: 18px;
+
     line-height: 1.7;
 }
 
@@ -146,6 +158,8 @@ h3 {
     text-decoration: none;
 
     border-bottom: 1px solid #555555;
+
+    transition: border-color 0.15s ease;
 }
 
 .hero-link:hover {
@@ -160,10 +174,10 @@ h3 {
 .hero-image {
     position: relative;
 
-    width: 45%;
-    height: 350px;
+    width: 55%;
+    height: 500px;
 
-    margin-left: -50px;
+    margin-left: -80px;
 
     overflow: hidden;
 
@@ -178,7 +192,7 @@ h3 {
     left: 0;
     top: 0;
 
-    width: 50%;
+    width: 55%;
     height: 100%;
 
     z-index: 1;
@@ -207,7 +221,8 @@ h3 {
 ========================= */
 
 .skills {
-    margin-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .skill-grid {
@@ -228,6 +243,16 @@ h3 {
     border: 1px solid #292929;
 
     border-radius: 10px;
+
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.skill:hover {
+    background-color: #1d1d1d;
+
+    border-color: #3a3a3a;
 }
 
 .skill h3 {
@@ -250,6 +275,7 @@ h3 {
     max-width: 700px;
 
     padding-top: 40px;
+    padding-bottom: 100px;
 
     border-top: 1px solid #292929;
 }
@@ -260,13 +286,185 @@ h3 {
 
 
 /* =========================
-   RESPONSIVE
+   PROJECTS HEADER
+========================= */
+
+.projects-header {
+    max-width: 700px;
+
+    padding-top: 90px;
+
+    margin-bottom: 80px;
+}
+
+.projects-header h2 {
+    margin-bottom: 15px;
+
+    font-size: 48px;
+}
+
+.projects-header p {
+    color: #999999;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   PROJECT CATEGORY
+========================= */
+
+.project-category {
+    margin-bottom: 80px;
+}
+
+.project-category h2 {
+    margin-bottom: 5px;
+}
+
+.category-description {
+    margin-top: 0;
+
+    color: #888888;
+}
+
+
+/* =========================
+   PROJECT GRID
+========================= */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   PROJECT CARD
+========================= */
+
+.project-card {
+    overflow: hidden;
+
+    padding: 0;
+
+    background-color: #181818;
+
+    border: 1px solid #292929;
+
+    border-radius: 10px;
+
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.project-card:hover {
+    background-color: #1d1d1d;
+
+    border-color: #3a3a3a;
+}
+
+.project-card h3,
+.project-card p,
+.project-card span {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.project-card h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    font-size: 20px;
+}
+
+.project-card p {
+    margin-top: 0;
+
+    color: #999999;
+}
+
+.project-card span {
+    display: inline-block;
+
+    margin-top: 5px;
+    margin-bottom: 25px;
+
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   PROJECT IMAGES
+========================= */
+
+.project-card img {
+    display: block;
+
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   GENERAL IMAGES
+========================= */
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================
+   LOADING BAR
+========================= */
+
+.loading-bar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 0%;
+    height: 3px;
+
+    background-color: #ffffff;
+
+    z-index: 9999;
+
+    transition:
+        width 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.loading-bar.loaded {
+    width: 100%;
+
+    opacity: 0;
+}
+
+
+/* =========================
+   MOBILE
 ========================= */
 
 @media (max-width: 700px) {
 
     header {
+        height: auto;
+
         flex-direction: column;
+
         align-items: flex-start;
 
         gap: 15px;
@@ -281,16 +479,24 @@ h3 {
 
 
     main {
-        padding: 60px 20px;
+        padding: 0 20px;
     }
 
 
     /* Hero */
 
+    .hero {
+        min-height: calc(100vh - 120px);
+    }
+
     .hero-content {
         flex-direction: column;
 
         align-items: flex-start;
+
+        justify-content: center;
+
+        min-height: auto;
     }
 
     .hero-text {
@@ -301,6 +507,13 @@ h3 {
         font-size: 40px;
     }
 
+    .hero-text p {
+        font-size: 16px;
+    }
+
+
+    /* Hero Image */
+
     .hero-image {
         width: 100%;
 
@@ -308,7 +521,19 @@ h3 {
 
         margin-left: 0;
 
-        margin-top: 30px;
+        margin-top: 40px;
+    }
+
+    .hero-image::before {
+        width: 100%;
+
+        height: 40%;
+
+        background: linear-gradient(
+            to bottom,
+            #111111,
+            transparent
+        );
     }
 
 
@@ -316,6 +541,21 @@ h3 {
 
     .skill-grid {
         grid-template-columns: 1fr;
+    }
+
+
+    /* Projects */
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-header {
+        padding-top: 60px;
+    }
+
+    .projects-header h2 {
+        font-size: 40px;
     }
 
 }
