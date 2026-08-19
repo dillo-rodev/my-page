@@ -12,10 +12,12 @@ html {
 
 body {
     margin: 0;
+
     background: #111111;
     color: #eeeeee;
 
     font-family: Arial, sans-serif;
+
     line-height: 1.6;
 }
 
@@ -34,6 +36,7 @@ header {
     padding: 0 60px;
 
     background: #111111;
+
     border-bottom: 1px solid #292929;
 
     position: relative;
@@ -49,6 +52,7 @@ header h1 {
 
 header h1 a {
     color: #eeeeee;
+
     text-decoration: none;
 }
 
@@ -59,6 +63,7 @@ header h1 a {
 
 nav {
     display: flex;
+
     gap: 25px;
 }
 
@@ -66,6 +71,7 @@ nav a {
     color: #999999;
 
     font-size: 15px;
+
     text-decoration: none;
 
     transition: color 0.15s ease;
@@ -82,6 +88,7 @@ nav a:hover {
 
 main {
     width: 100%;
+
     margin: 0;
 }
 
@@ -96,21 +103,26 @@ main {
     min-height: calc(100vh - 73px);
 
     display: flex;
+
     align-items: center;
 
     overflow: hidden;
 }
 
 
-/* Text */
+/* HERO TEXT */
 
 .hero-text {
     position: relative;
 
     width: 55%;
+
     max-width: 800px;
 
-    margin-left: max(60px, calc((100vw - 1200px) / 2));
+    margin-left: max(
+        60px,
+        calc((100vw - 1100px) / 2)
+    );
 
     z-index: 3;
 }
@@ -131,6 +143,7 @@ main {
     color: #999999;
 
     font-size: 18px;
+
     line-height: 1.7;
 }
 
@@ -153,9 +166,7 @@ main {
 }
 
 
-/* =========================
-   HERO IMAGE
-========================= */
+/* HERO IMAGE */
 
 .hero-image {
     position: absolute;
@@ -170,16 +181,16 @@ main {
 }
 
 .hero-image img {
+    display: block;
+
     width: 100%;
     height: 100%;
-
-    display: block;
 
     object-fit: cover;
 }
 
 
-/* Fade image into background */
+/* IMAGE FADE */
 
 .hero-image::before {
     content: "";
@@ -207,22 +218,39 @@ main {
 
 
 /* =========================
-   SKILLS
+   GENERAL CONTENT SECTIONS
 ========================= */
 
-.skills {
+.content-section {
+    width: 100%;
+
     max-width: 1100px;
 
     margin: 0 auto;
 
-    padding: 120px 30px;
+    padding: 100px 30px;
 }
 
-.skills h2 {
+.content-section > h2 {
     margin-top: 0;
 
     font-size: 36px;
+
+    line-height: 1.2;
 }
+
+.section-description {
+    margin-top: -5px;
+
+    margin-bottom: 30px;
+
+    color: #888888;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
 
 .skill-grid {
     display: grid;
@@ -240,6 +268,7 @@ main {
     background: #181818;
 
     border: 1px solid #292929;
+
     border-radius: 10px;
 
     transition:
@@ -249,6 +278,7 @@ main {
 
 .skill:hover {
     background: #1d1d1d;
+
     border-color: #3a3a3a;
 }
 
@@ -266,15 +296,207 @@ main {
 
 
 /* =========================
-   CURRENT
+   CODE SHOWCASE
+========================= */
+
+.code-section {
+    padding-top: 20px;
+}
+
+.code-showcase {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #0b0b0b;
+
+    border: 1px solid #292929;
+
+    border-radius: 10px;
+}
+
+.code-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 18px;
+
+    background: #181818;
+
+    border-bottom: 1px solid #292929;
+
+    color: #bbbbbb;
+
+    font-size: 14px;
+}
+
+.code-language {
+    color: #777777;
+}
+
+.code-showcase pre {
+    margin: 0;
+
+    padding: 25px;
+
+    overflow-x: auto;
+
+    background: #0b0b0b;
+}
+
+.code-showcase code {
+    font-family: Consolas, Monaco, monospace;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   SHOWCASES
+========================= */
+
+.showcases {
+    padding-top: 20px;
+}
+
+.section-heading {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    margin: 0 0 5px;
+
+    font-size: 36px;
+}
+
+.section-heading p {
+    margin: 0;
+
+    color: #888888;
+}
+
+.section-heading > a {
+    color: #999999;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #444444;
+
+    transition: color 0.15s ease;
+}
+
+.section-heading > a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================
+   SHOWCASE GRID
+========================= */
+
+.showcase-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+/* =========================
+   SHOWCASE CARD
+========================= */
+
+.showcase-card {
+    display: block;
+
+    overflow: hidden;
+
+    background: #181818;
+
+    border: 1px solid #292929;
+
+    border-radius: 10px;
+
+    color: #eeeeee;
+
+    text-decoration: none;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.showcase-card:hover {
+    background: #1d1d1d;
+
+    border-color: #3a3a3a;
+
+    transform: translateY(-3px);
+}
+
+
+/* SHOWCASE IMAGE */
+
+.showcase-card > img {
+    display: block;
+
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+}
+
+
+/* SHOWCASE INFO */
+
+.showcase-info {
+    padding: 20px 22px 23px;
+}
+
+.showcase-type {
+    color: #777777;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.showcase-info h3 {
+    margin: 7px 0 8px;
+
+    font-size: 20px;
+}
+
+.showcase-info p {
+    margin: 0;
+
+    color: #999999;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CURRENTLY
 ========================= */
 
 .current {
-    max-width: 1100px;
+    padding-top: 20px;
 
-    margin: 0 auto;
-
-    padding: 0 30px 120px;
+    padding-bottom: 120px;
 }
 
 .current h2 {
@@ -287,139 +509,6 @@ main {
     max-width: 700px;
 
     color: #999999;
-}
-
-
-/* =========================
-   PROJECTS PAGE
-========================= */
-
-.projects-header {
-    max-width: 1100px;
-
-    margin: 0 auto;
-
-    padding: 90px 30px 40px;
-}
-
-.projects-header h2 {
-    margin: 0 0 15px;
-
-    font-size: 48px;
-}
-
-.projects-header p {
-    max-width: 700px;
-
-    color: #999999;
-
-    font-size: 17px;
-}
-
-
-/* =========================
-   PROJECT CATEGORIES
-========================= */
-
-.project-category {
-    max-width: 1100px;
-
-    margin: 0 auto;
-
-    padding: 40px 30px;
-}
-
-.project-category h2 {
-    margin: 0 0 5px;
-
-    font-size: 32px;
-}
-
-.category-description {
-    margin: 0;
-
-    color: #888888;
-}
-
-
-/* =========================
-   PROJECT GRID
-========================= */
-
-.project-grid {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 15px;
-
-    margin-top: 25px;
-}
-
-
-/* =========================
-   PROJECT CARD
-========================= */
-
-.project-card {
-    overflow: hidden;
-
-    padding: 0;
-
-    background: #181818;
-
-    border: 1px solid #292929;
-    border-radius: 10px;
-
-    transition:
-        background 0.15s ease,
-        border-color 0.15s ease;
-}
-
-.project-card:hover {
-    background: #1d1d1d;
-
-    border-color: #3a3a3a;
-}
-
-.project-card img {
-    display: block;
-
-    width: 100%;
-    height: 220px;
-
-    object-fit: cover;
-}
-
-.project-card h3,
-.project-card p,
-.project-card span {
-    margin-left: 25px;
-    margin-right: 25px;
-}
-
-.project-card h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-
-    font-size: 20px;
-}
-
-.project-card p {
-    margin-top: 0;
-
-    color: #999999;
-}
-
-.project-card span {
-    display: inline-block;
-
-    margin-top: 5px;
-    margin-bottom: 25px;
-
-    color: #777777;
-
-    font-size: 13px;
 }
 
 
@@ -447,6 +536,7 @@ main {
 
 .loading-bar.loaded {
     width: 100%;
+
     opacity: 0;
 }
 
@@ -457,12 +547,15 @@ main {
 
 @media (max-width: 700px) {
 
+    /* Header */
+
     header {
         height: auto;
 
         padding: 20px 25px;
 
         flex-direction: column;
+
         align-items: flex-start;
 
         gap: 15px;
@@ -486,8 +579,9 @@ main {
     .hero-text {
         width: 100%;
 
-        margin-left: 20px;
-        margin-right: 20px;
+        margin: 0 20px;
+
+        padding-right: 20px;
     }
 
     .hero-text h2 {
@@ -499,126 +593,77 @@ main {
     }
 
 
-    /* Image */
+    /* Mobile hero image */
 
     .hero-image {
         width: 100%;
+
         height: 100%;
 
-        opacity: 0.65;
+        opacity: 0.6;
     }
 
     .hero-image::before {
         width: 100%;
+
         height: 100%;
 
         background: linear-gradient(
             to bottom,
-            rgba(17, 17, 17, 0.2),
+            rgba(17, 17, 17, 0.15),
             #111111 85%
         );
     }
 
 
-    /* Skills */
+    /* Content */
 
-    .skills {
+    .content-section {
         padding: 80px 20px;
     }
+
+
+    /* Skills */
 
     .skill-grid {
         grid-template-columns: 1fr;
     }
 
 
-    /* Projects */
+    /* Code */
 
-    .projects-header {
-        padding: 60px 20px 30px;
+    .code-showcase pre {
+        padding: 18px;
     }
 
-    .project-category {
-        padding: 30px 20px;
+    .code-showcase code {
+        font-size: 13px;
     }
 
-    .project-grid {
+
+    /* Showcases */
+
+    .showcase-grid {
         grid-template-columns: 1fr;
     }
 
-   /* =========================
-   CODE SHOWCASE
-========================= */
+    .section-heading {
+        align-items: flex-start;
 
-.code-section {
-    max-width: 1100px;
+        flex-direction: column;
 
-    margin: 0 auto;
+        gap: 15px;
+    }
 
-    padding: 40px 30px 120px;
-}
-
-.code-section h2 {
-    margin-bottom: 10px;
-}
-
-.code-description {
-    color: #999999;
-
-    margin-top: 0;
-    margin-bottom: 25px;
-}
+    .showcase-card > img {
+        height: 200px;
+    }
 
 
-.code-showcase {
-    overflow: hidden;
+    /* Current */
 
-    background: #0b0b0b;
+    .current {
+        padding-bottom: 80px;
+    }
 
-    border: 1px solid #292929;
-
-    border-radius: 10px;
-}
-
-
-.code-header {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 12px 18px;
-
-    background: #181818;
-
-    border-bottom: 1px solid #292929;
-
-    color: #bbbbbb;
-
-    font-size: 14px;
-}
-
-
-.code-language {
-    color: #777777;
-}
-
-
-.code-showcase pre {
-    margin: 0;
-
-    padding: 25px;
-
-    overflow-x: auto;
-
-    background: #0b0b0b;
-}
-
-
-.code-showcase code {
-    font-family: Consolas, Monaco, monospace;
-
-    font-size: 14px;
-
-    line-height: 1.6;
-}
 }
