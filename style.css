@@ -545,4 +545,80 @@ main {
         grid-template-columns: 1fr;
     }
 
+   /* =========================
+   CODE SHOWCASE
+========================= */
+
+.code-section {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 40px 30px 120px;
+}
+
+.code-section h2 {
+    margin-bottom: 10px;
+}
+
+.code-description {
+    color: #999999;
+
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+
+.code-showcase {
+    overflow: hidden;
+
+    background: #0b0b0b;
+
+    border: 1px solid #292929;
+
+    border-radius: 10px;
+}
+
+
+.code-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 18px;
+
+    background: #181818;
+
+    border-bottom: 1px solid #292929;
+
+    color: #bbbbbb;
+
+    font-size: 14px;
+}
+
+
+.code-language {
+    color: #777777;
+}
+
+
+.code-showcase pre {
+    margin: 0;
+
+    padding: 25px;
+
+    overflow-x: auto;
+
+    background: #0b0b0b;
+}
+
+
+.code-showcase code {
+    font-family: Consolas, Monaco, monospace;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
 }
