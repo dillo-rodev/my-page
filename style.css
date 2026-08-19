@@ -709,6 +709,102 @@ main {
 }
 
 /* =========================
+   PROJECT CODE SHOWCASE
+========================= */
+
+.project-code {
+    margin-top: 20px;
+
+    overflow: hidden;
+
+    background: #0b0b0b;
+
+    border: 1px solid #292929;
+
+    border-radius: 8px;
+}
+
+
+/* CODE HEADER */
+
+.project-code-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 14px;
+
+    background: #151515;
+
+    border-bottom: 1px solid #292929;
+
+    color: #999999;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+}
+
+
+/* CODE WINDOW */
+
+.project-code pre {
+    max-height: 280px;
+
+    margin: 0;
+
+    padding: 15px;
+
+    overflow: auto;
+
+    background: #0b0b0b;
+}
+
+.project-code code {
+    font-family: Consolas, Monaco, monospace;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+}
+
+
+/* SCROLLBAR */
+
+.project-code pre::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+.project-code pre::-webkit-scrollbar-track {
+    background: #0b0b0b;
+}
+
+.project-code pre::-webkit-scrollbar-thumb {
+    background: #333333;
+
+    border-radius: 10px;
+}
+
+.project-code pre::-webkit-scrollbar-thumb:hover {
+    background: #444444;
+}
+
+
+/* =========================
+   PROJECT CARD WITH CODE
+========================= */
+
+.project-card:has(.project-code) {
+    cursor: default;
+}
+
+.project-card:has(.project-code):hover {
+    transform: none;
+}
+
+/* =========================
    MOBILE
 ========================= */
 
